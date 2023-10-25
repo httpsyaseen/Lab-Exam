@@ -1,6 +1,10 @@
 const state = document.querySelectorAll(".faq-toggle");
 state.forEach((el) => {
   el.addEventListener("click", () => {
+    if (el.parentNode.classList.contains("active")) {
+      const d = el.parentNode;
+      d.parentNode.removeChild(d);
+    }
     el.parentNode.classList.toggle("active");
   });
 });
