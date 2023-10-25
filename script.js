@@ -31,4 +31,9 @@ function added() {
 
 function mychange(e) {
   e.parentNode.classList.toggle("active");
+  const cross = e.querySelector(".fa-times");
+  cross.addEventListener("click", () => {
+    let d = e.parentNode;
+    d.parentNode.removeChild(d);
+  });
 }
